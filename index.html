@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xzm | 个人空间</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>xzm | 个人空间</h1>
+        <nav>
+            <a href="#home" class="nav-icon">首页</a>
+            <span class="contact-info">联系我：246084110@qq.com</span>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content">
+            <div id="articles">
+                <!-- 文章区域将在这里 -->
+            </div>
+        </section>
+        <aside id="sidebar">
+            <div id="user-status">
+                <span id="login-status"></span>
+                <button id="logout-btn" style="display: none;">退出登录</button>
+            </div>
+            <div id="login-area">
+                <h2>登录</h2>
+                <form id="login-form">
+                    <input type="text" id="login-username" placeholder="用户名" required>
+                    <input type="password" id="login-password" placeholder="密码" required>
+                    <button type="submit">登录</button>
+                </form>
+                <p id="login-message"></p>
+                
+                <h2>注册</h2>
+                <form id="register-form">
+                    <input type="text" id="register-username" placeholder="用户名" required>
+                    <input type="password" id="register-password" placeholder="密码" required>
+                    <input type="tel" id="register-phone" placeholder="电话号码" required>
+                    <button type="submit">注册</button>
+                </form>
+                <p id="register-message"></p>
+            </div>
+            <div id="photos">
+                <!-- 照片网格将在这里 -->
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon" id="wechat"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="social-icon" id="tiktok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon" id="phone"><i class="fas fa-phone"></i></a>
+            <a href="mailto:4@7.com" class="social-icon" id="email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div id="social-info"></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+:root {
+    --main-color: #e6f2ff;
+    --text-color: #333;
+    --accent-color: #4a90e2;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-icon {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info {
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* 按钮居中样式 */
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+#content {
+    flex: 2;
+}
+
+#sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#articles {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#login-area {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    
+    #sidebar {
+        order: -1;
+    }
+}
+
+#login-status {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#logout-btn:hover {
+    background-color: #c0392b;
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: block;
+    text-decoration: none;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#social-info {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px 0;
+    width: 80%; /* 设置按钮宽度 */
+    max-width: 200px; /* 设置最大宽度 */
+}
+
+button:hover {
+    background-color: #3a7bc8;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+.like-btn i {
+    color: #e74c3c;
+}
+
+.comment-btn i {
+    color: #2ecc71;
+}
+
+#logout-btn {
+    background-color: #e74c3c;
+}
+
+#logout-btn:hover {
+    background-color: #c0392b;
+}
+
+#login-form, #register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#login-form input, #register-form input {
+    width: 80%;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+/* 输入框样式优化 */
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* 表单布局优化 */
+#login-form,
+#register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* 输入框占位符文本样式 */
+::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+/* 输入框标签样式（如果您想添加标签） */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* 表单标题样式 */
+#login-area h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+/* 错误消息样式 */
+#login-message,
+#register-message {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 添加到文件末尾 */
+article h2:after {
+    content: attr(data-private);
+    font-size: 0.6em;
+    color: #e74c3c;
+    margin-left: 10px;
+    vertical-align: super;
+}
+
+#add-private-article-btn {
+    background-color: #8e44ad;
+}
+
+#add-private-article-btn:hover {
+    background-color: #6c3483;
+}
+
+#delete-article-container {
+    display: inline-block;
+    position: relative;
+}
+
+#article-select {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.edit-article-btn {
+    background-color: #3498db;
+    margin-top: 10px;
+}
+
+.edit-article-btn:hover {
+    background-color: #2980b9;
+}
+
+#admin-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#admin-controls button {
+    width: 100%;
+    max-width: 200px;
+}
+
+#article-select {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
